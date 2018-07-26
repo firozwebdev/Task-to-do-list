@@ -20,6 +20,11 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('task-index', require('./components/Taskindex.vue'));
 Vue.component('task-create', require('./components/Taskcreate.vue'));
 Vue.component('task-edit', require('./components/Taskedit.vue'));
+Vue.component('admin-home', require('./components/Adminhome.vue'));
+
+
+Vue.component('user-create', require('./components/Usercreate.vue'));
+Vue.component('user-edit', require('./components/Useredit.vue'));
 
 const app = new Vue({
     el: '#app'

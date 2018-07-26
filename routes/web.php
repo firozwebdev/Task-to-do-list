@@ -13,8 +13,28 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Auth::routes();
 
 Route::resource('/tasks', 'TaskController');
+
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => ['web','auth']], function(){
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Route::get('/home', function () {
+        if(Auth::user()->admin == 0){
+            return view('users.home');
+        }else{
+            $users['users'] = \App\User::all();
+            return view('admin.home')->with('users',$users);
+        }
+    });
+    Route::resource('/users', 'UserController');
+
+});

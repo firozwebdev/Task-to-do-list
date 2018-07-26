@@ -1,6 +1,6 @@
 <template>
     <div>
-       <div class="col-md-6 col-md-offset-3" style="margin-top:50px;">
+       <div class="col-md-8 col-md-offset-2" style="margin-top:50px;">
            
                 <div class="aler alert-danger" v-if="errors.length > 0">
                     <ul>
@@ -49,6 +49,7 @@
                  axios.post('/api/tasks/', {
                     title: this.task.title,
                     description: this.task.description,
+                   
                 }).then(response => {
                     this.reset();
                     this.tasks.push(response.data.task);
@@ -64,6 +65,7 @@
                         this.errors.push(error.response.data.errors.description[0]);
                     }
                 });
+                window.location.href = '/tasks';
             },
 
             //utility functions

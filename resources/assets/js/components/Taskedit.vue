@@ -67,7 +67,8 @@
                         this.message = response.data.message;
                     }).catch( error => {
                         console.log(error);
-                    })
+                    });
+                     window.location.href = '/tasks';
                 },
 
             //utility functions

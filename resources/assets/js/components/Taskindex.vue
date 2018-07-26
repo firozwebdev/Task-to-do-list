@@ -60,8 +60,8 @@
 
             deleteTask(id, index){
                 axios.delete('/api/tasks/'+id).then( response => {
-                  // this.tasks.splice(index);
-                   window.location.href = '/tasks';
+                   this.tasks.splice(index);
+                   //window.location.href = '/tasks';
                 }).catch( error =>{
                     console.log(error);
                 });
