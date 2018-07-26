@@ -15,6 +15,10 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
+    public function index(){
+        return view('admin.home');
+    }
+
  
      public function create(){
          return view('users.create');

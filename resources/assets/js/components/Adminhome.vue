@@ -20,7 +20,7 @@
                 <td style="width:27%">
                                 
                         <a  :href="'/users/'+ user.id +'/edit'" class="btn btn-primary">Edit</a>
-                        <a href="" class="btn btn-danger" @click.prevent="deleteUser(user.id, index)">Delete</a>
+                        <a  class="btn btn-danger" @click.prevent="deleteUser(user.id, index)">Delete</a>
                 </td>
                </tr>
 

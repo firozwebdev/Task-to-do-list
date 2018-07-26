@@ -48612,7 +48612,6 @@ var render = function() {
                   "a",
                   {
                     staticClass: "btn btn-danger",
-                    attrs: { href: "" },
                     on: {
                       click: function($event) {
                         $event.preventDefault()
